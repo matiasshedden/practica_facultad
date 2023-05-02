@@ -1,35 +1,32 @@
 package practico3.encuestas;
 
+import java.util.ArrayList;
+
 public class encuesta {
 
-	private String preguntas;
-	private String persona_encuestada;
-	
-	
-	public encuesta(String preguntas, String persona_encuestada) {
-		this.preguntas = preguntas;
-		this.persona_encuestada = persona_encuestada;
+	private String pregunta; // ArrayList de String??
+	private int DNI_persona;//Persona encuestada
+	private String empleado; // Guardo el nombre del que realiza la encuesta
+	private boolean isRealizada;
+
+
+
+	public encuesta(String p, String nombre_empleado) {
+		this.pregunta = p;
+		this.empleado = nombre_empleado;
 	}
 
-
-	public String getPreguntas() {
-		return preguntas;
+	public encuesta(String p, String nombre_empleado, int DNI_encuestado) {
+		super();
+		this.DNI_persona = DNI_encuestado;
+        this.isRealizada = true;
 	}
 
-
-	public void setPreguntas(String preguntas) {
-		this.preguntas = preguntas;
+	public int getDNI_persona() {
+		return DNI_persona;
 	}
 
-
-	public String getPersona_encuestada() {
-		return persona_encuestada;
+	public boolean isRealizada() {
+		return isRealizada;
 	}
-
-
-	public void setPersona_encuestada(String persona_encuestada) {
-		this.persona_encuestada = persona_encuestada;
-	}
-	
-	
 }
