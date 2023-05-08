@@ -3,15 +3,16 @@ package practico3.encuestas;
 import java.util.ArrayList;
 
 /**
- * La clase compania agrega un arreglo de encuestas
+ * La clase compania agrega un arreglo de encuestas y una comision por encuesta respondida
  */
 public class Compania {
 
-    private ArrayList <encuesta> E;
     private String nombre;
+    private ArrayList <encuesta> E;
+    private final int comisionEncuesta = 10;
 
+    //Metodos
     public void addEncuesta(encuesta e) {
-        if (e.isRealizada())
             E.add(e);
     }
     public String getNombre() {
