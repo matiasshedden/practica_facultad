@@ -16,7 +16,7 @@ public class master {
 		System.out.println(test.Esta_en_forma(Altura, Peso));
 		if (test.esCoherente(FechaNac)) {
 			System.out.println("Esta persona es coherente");
-			System.out.println(test.Cumpliendo_años(FechaNac));
+			System.out.println(test.Cumpliendo_anios(FechaNac));
 			System.out.println(test.esAdulto(FechaNac));
 			System.out.println(test.CanIvote(FechaNac));
 			System.out.println(test.DatosPersona(test.getDNI()));}

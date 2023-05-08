@@ -4,29 +4,32 @@ import java.util.ArrayList;
 
 public class encuesta {
 
-	private String pregunta; // ArrayList de String??
-	private int DNI_persona;//Persona encuestada
-	private String empleado; // Guardo el nombre del que realiza la encuesta
-	private boolean isRealizada;
+	private int nroEnc;
+	private ArrayList <String> Preguntas;
+	protected ArrayList <respuesta> R; //almacena las respuestas como objeto
 
-
-
-	public encuesta(String p, String nombre_empleado) {
-		this.pregunta = p;
-		this.empleado = nombre_empleado;
+	//Constructor
+	public encuesta(int NE) {
+		this.Preguntas = new ArrayList<>();
+		this.R = new ArrayList<>();
+		this.nroEnc = NE;
 	}
 
-	public encuesta(String p, String nombre_empleado, int DNI_encuestado) {
-		super();
-		this.DNI_persona = DNI_encuestado;
-        this.isRealizada = true;
+	public void addPreguntas (String P) {
+		Preguntas.add(P);
 	}
 
-	public int getDNI_persona() {
-		return DNI_persona;
+	public void addRespuestas (respuesta Res) {
+		R.add(Res);
 	}
 
-	public boolean isRealizada() {
-		return isRealizada;
+	//getter abd setter
+
+	public int getNroEnc() {
+		return nroEnc;
+	}
+
+	public String devuelvoEmpleado(respuesta R) {
+		return R.getEmpleado();
 	}
 }
