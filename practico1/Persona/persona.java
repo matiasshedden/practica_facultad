@@ -82,23 +82,23 @@ public class persona {
 	
 	public String Esta_en_forma(double Altura, double Peso) {
 		if ((imc(Altura, Peso) >= 18.5) && (imc(Altura, Peso) <= 25))
-			return "Está en forma";
+			return "Estï¿½ en forma";
 		else
-			return "No está en forma";
+			return "No estï¿½ en forma";
 	}
 	
-	public String Cumpliendo_años(LocalDate FechaNac) {
+	public String Cumpliendo_anios(LocalDate FechaNac) {
 		LocalDate Hoy = LocalDate.now();
 		if ((Hoy.getYear() > FechaNac.getYear()) 
 			&& (Hoy.getMonth() == FechaNac.getMonth()) 
 			&& ((Hoy.getDayOfMonth() == FechaNac.getDayOfMonth())))
-			return "Hoy es su cumpleaños";
+			return "Hoy es su cumpleanios";
 		else
-			return "Hoy no es su cumpleaños";
+			return "Hoy no es su cumpleanios";
 	}
 	
 	
-	//Controlamos que sea coherente, que haya nacido y que no tenga mas de 110 años
+	//Controlamos que sea coherente, que haya nacido y que no tenga mas de 110 aï¿½os
 	public Boolean esCoherente (LocalDate Fechanac) {
 		LocalDate Hoy = LocalDate.now();
 		Period periodo = Period.between(Fechanac, Hoy);
@@ -119,7 +119,7 @@ public class persona {
 		return false;
 	}
 	
-	//Controla que mayor sea mas grande que una cantidad de años dada
+	//Controla que mayor sea mas grande que una cantidad de aï¿½os dada
 	public Boolean Esmayor (LocalDate FechaNac, int mayor) {
 		if (YearPlusN(FechaNac, mayor))
 			return true;
