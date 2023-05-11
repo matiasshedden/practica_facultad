@@ -1,6 +1,6 @@
 package practico4.RegistroEmpresa;
 
-public class usuario_final extends persona{
+public class Usuario_final extends Persona {
     String nombre_usuario;
     String password;
 
@@ -20,12 +20,13 @@ public class usuario_final extends persona{
         this.password = password;
     }
 
-    public usuario_final(String nombre_usuario, String password) {
+    public Usuario_final(String nombre_usuario, String password) {
         this.nombre_usuario = nombre_usuario;
         this.password = password;
     }
 
-    public String mostrarDatos() {
-        return super.mostrarDatos();
+    @Override
+    public String toString() {
+        return super.toString() + ", Usuario_final";
     }
 }

@@ -1,10 +1,10 @@
 package practico4.RegistroEmpresa;
 
-public class empleado extends persona {
+public class Empleado extends Persona {
     private int nroLegajo;
     double sueldo;
 
-    public empleado() {
+    public Empleado() {
 
     }
 
@@ -25,13 +25,13 @@ public class empleado extends persona {
     }
 
     //Constructor
-    public empleado(int nroLegajo, double sueldo) {
+    public Empleado(int nroLegajo, double sueldo) {
         this.nroLegajo = nroLegajo;
         this.sueldo = sueldo;
     }
 
-
-    public String mostrarDatos () {
-        return super.mostrarDatos();
+    @Override
+    public String toString() {
+        return super.toString() + ", empleado";
     }
 }

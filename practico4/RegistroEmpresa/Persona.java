@@ -1,6 +1,6 @@
 package practico4.RegistroEmpresa;
 
-public class persona {
+public class Persona {
     private String nombre;
     private String apellido;
     private int edad;
@@ -29,7 +29,9 @@ public class persona {
         this.edad = edad;
     }
 
-    public String mostrarDatos () {
-        return (getNombre() + " " + getApellido() + " " + getEdad());
+    @Override
+    public String toString() {
+        return "{" +"nombre='" + nombre + '\'' +", apellido='" + apellido + '\'' +
+                ", edad=" + edad +'}';
     }
 }
