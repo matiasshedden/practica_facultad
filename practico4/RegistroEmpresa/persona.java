@@ -28,4 +28,8 @@ public class persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+    public String mostrarDatos () {
+        return (getNombre() + " " + getApellido() + " " + getEdad());
+    }
 }

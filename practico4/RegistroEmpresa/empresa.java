@@ -19,4 +19,16 @@ public class empresa {
         Empleados = new ArrayList<>();
         UsuariosF = new ArrayList<>();
     }
+
+    public void mostrarEmpleados() {
+        for (int i=0; i<Empleados.size();i++) {
+            System.out.println(Empleados.get(i).mostrarDatos());
+        }
+    }
+
+    public void mostrarUsuario() {
+        for (int i=0; i<UsuariosF.size();i++) {
+            System.out.println(UsuariosF.get(i).mostrarDatos());
+        }
+    }
 }

@@ -24,4 +24,8 @@ public class usuario_final extends persona{
         this.nombre_usuario = nombre_usuario;
         this.password = password;
     }
+
+    public String mostrarDatos() {
+        return super.mostrarDatos();
+    }
 }

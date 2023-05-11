@@ -1,6 +1,6 @@
 package practico4.RegistroEmpresa;
 
-public class empleado extends persona{
+public class empleado extends persona {
     private int nroLegajo;
     double sueldo;
 
@@ -28,5 +28,10 @@ public class empleado extends persona{
     public empleado(int nroLegajo, double sueldo) {
         this.nroLegajo = nroLegajo;
         this.sueldo = sueldo;
+    }
+
+
+    public String mostrarDatos () {
+        return super.mostrarDatos();
     }
 }
