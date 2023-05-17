@@ -2,7 +2,7 @@ package SH;
 
 import java.time.DayOfWeek;
 
-public class master {
+public class Main {
 
 	public static void main(String[] args, DayOfWeek sabado) {
 		// TODO Auto-generated method stub
