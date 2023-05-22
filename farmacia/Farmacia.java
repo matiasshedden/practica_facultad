@@ -1,7 +1,6 @@
 package farmacia;
 
 import java.util.ArrayList;
-import farmacia2.*;
 
 public class Farmacia {
 	
