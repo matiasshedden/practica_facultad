@@ -2,9 +2,9 @@ package practico5.facturacionEmpleados;
 
 public class vendedor extends empleado {
     private int cant_ventas;
-    private int porcentaje;
+    private double porcentaje;
 
-    public vendedor(String nombre, String apellido, int DNI, double sueldo, int cant_ventas, int porcentaje) {
+    public vendedor(String nombre, String apellido, int DNI, double sueldo, int cant_ventas, double porcentaje) {
         super(nombre, apellido, DNI, sueldo);
         this.cant_ventas = cant_ventas;
         this.porcentaje = porcentaje;
@@ -14,13 +14,13 @@ public class vendedor extends empleado {
         return cant_ventas;
     }
 
-    public int getPorcentaje() {
+    public double getPorcentaje() {
         return porcentaje;
     }
 
     @Override
     public double getSueldo() {
-        return (sueldo*(1+(getPorcentaje()/100)));
+        return (sueldo*( 1 + porcentaje / 100 ));
     }
 
     @Override
