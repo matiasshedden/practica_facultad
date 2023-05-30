@@ -1,12 +1,12 @@
 package practico5.facturacionEmpleados;
 
 public class empleado {
-    String nombre;
-    String apellido;
-    int DNI;
-    double sueldo;
+    private String nombre;
+    private String apellido;
+    private int DNI;
+    private Sueldo sueldo;
 
-    public empleado(String nombre, String apellido, int DNI, double sueldo) {
+    public empleado(String nombre, String apellido, int DNI, Sueldo sueldo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.DNI = DNI;
@@ -26,7 +26,10 @@ public class empleado {
     }
 
     public double getSueldo() {
-        return sueldo;
+        if (sueldo != null) {
+            return sueldo.getSueldoTotal();
+        }
+        return 0;
     }
 
     @Override
@@ -35,7 +38,7 @@ public class empleado {
                 "'" + nombre +
                 " " + apellido + '\'' +
                 ", DNI " + DNI +
-                ", sueldo " + sueldo +
+                ", sueldo " + this.getSueldo() +
                 '}';
     }
 }
