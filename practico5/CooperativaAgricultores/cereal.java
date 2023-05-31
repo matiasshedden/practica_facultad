@@ -2,7 +2,7 @@ package practico5.CooperativaAgricultores;
 
 import java.util.ArrayList;
 
-public class cereal extends minerales {
+public class cereal{
     String nombre;
     private ArrayList <String> mineralesRequeridos;
 
@@ -12,23 +12,27 @@ public class cereal extends minerales {
         mineralesRequeridos = new ArrayList<>();
     }
 
-    @Override
+
     public void addMineral(String mineral) {
         mineralesRequeridos.add(mineral);
     }
 
-    @Override
+
     public boolean contieneMineral(String mineral) {
         if (mineralesRequeridos.contains(mineral))
             return true;
         return false;
     }
-
-    public boolean contieneElemento(String elem) {
-        return super.contieneElemento(mineralesRequeridos, elem);
-    }
-
     public String getNombre() {
         return nombre;
+    }
+
+    public boolean contieneMineral(lote lot) {
+        //Busca si el mineral esta en el lote
+        if (!mineralesRequeridos.isEmpty())
+            for (String m:mineralesRequeridos)
+                if (!lot.contieneMineral(m))
+                    return false;
+        return true;
     }
 }
