@@ -6,23 +6,28 @@ public class main {
         cooperativa Coop = new cooperativa();
         Coop.addMineral("oro");
         Coop.addMineral("cobre");
-        lote chiquito = new lote(100);
+        lote chiquito = new lote(10);
         chiquito.addMineral("oro");
-        chiquito.addMineral("plata");
-        chiquito.addMineral("cobre");
+
         cereal trigo = new cereal("trigo");
         cereal maiz = new cereal("maiz");
         cereal girasol = new cereal("girasol");
         trigo.addMineral("oro");
         trigo.addMineral("plata");
         maiz.addMineral("cobre");
-        girasol.addMineral("");
+        girasol.addMineral("oro");
+        pastura alfalfa = new pastura("alfalfa");
+        alfalfa.addMineral("oro");
 
-        if (Coop.contieneMineral(chiquito))
-            System.out.println("El lote es especial");
+        if (girasol.contieneMineral(chiquito))
+            System.out.println("Se puede plantar en el lote ");
         else
-            System.out.println("El lote es comun");
+            System.out.println("NO se puede plantar en el lote");
 
-        System.out.println(chiquito.contieneElemento());
+        if (chiquito.contieneMineral(alfalfa))
+            System.out.println("El lote acepta el cereal");
+        else
+            System.out.println("El lote NO acepta el cereal");
+
     }
 }
