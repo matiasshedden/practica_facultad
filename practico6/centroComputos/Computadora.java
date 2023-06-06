@@ -1,5 +1,4 @@
-package centroComputos;
-
+package practico6.centroComputos;
 public class Computadora implements Comparable<Computadora>{
     private String nombre;
     private double velocidad;

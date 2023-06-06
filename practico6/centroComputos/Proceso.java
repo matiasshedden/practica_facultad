@@ -1,5 +1,4 @@
-package centroComputos;
-
+package practico6.centroComputos;
 public class Proceso implements Comparable<Proceso>{
     private String nombre;
     private double memoriaRequerida;

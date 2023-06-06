@@ -1,12 +1,10 @@
-package centroComputos;
+package practico6.centroComputos;
+
+import fileSystem.Archivo;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-
-import centroComputos.comparadores.*;
-import centroComputos.comparadores.*;
-import fileSystem.Archivo;
 
 public class Pruebas {
     public static void main(String[] args) {
@@ -35,21 +33,21 @@ public class Pruebas {
         System.out.println(archivos);
 
         System.out.println("Ordeno los archivos por tamanio ascendente");
-        Comparator tamanioMenor = new ComparadorArchivoPorTamanio();
+        Comparator tamanioMenor = new centroComputos.comparadores.ComparadorArchivoPorTamanio();
         Collections.sort(archivos, tamanioMenor);
         System.out.println(archivos);
 
         System.out.println("Ordeno los archivos por tamanio descendente");
-        Comparator tamanioMayor = new ComparadorInverso(tamanioMenor);
+        Comparator tamanioMayor = new centroComputos.comparadores.ComparadorInverso(tamanioMenor);
         Collections.sort(archivos, tamanioMayor);
         System.out.println(archivos);
 
         Collections.sort(archivos, Collections.reverseOrder());
 
-        Comparator nombreDes = new ComparadorArchivoPorNombre().reversed();
+        Comparator nombreDes = new centroComputos.comparadores.ComparadorArchivoPorNombre().reversed();
         Collections.sort(archivos, nombreDes);
 
-        Collections.sort(archivos, Collections.reverseOrder(new ComparadorArchivoPorNombre()));
+        Collections.sort(archivos, Collections.reverseOrder(new centroComputos.comparadores.ComparadorArchivoPorNombre()));
 
     }
 }

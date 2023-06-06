@@ -1,4 +1,5 @@
-package centroComputos;
+package practico6.centroComputos;
+
 
 import java.util.ArrayList;
 
