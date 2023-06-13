@@ -1,4 +1,4 @@
-package puertoDeCereales.Comparadores;
+package practico6.PuertoDeCereales.puertoDeCereales.Comparadores;
 
 import puertoDeCereales.Camion;
 

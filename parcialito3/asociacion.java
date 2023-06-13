@@ -26,9 +26,13 @@ public class asociacion {
         corredores.add(c);
     }
 
-    public String mostrarCorredores() {
+    public void mostrarCorredores() {
         for (corredor c:corredores)
-            c.toString();
-        return null;
+            System.out.println(c);
+    }
+
+    public ArrayList<corredor> PorPodio() {
+        ArrayList<corredor> resultado = new ArrayList<>();
+
     }
 }

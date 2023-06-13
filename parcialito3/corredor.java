@@ -1,8 +1,9 @@
 package parcialito3;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
-public class corredor {
+public class corredor implements Comparable<corredor> {
 
     private int anio_nac;
     private String nombre;
@@ -36,6 +37,11 @@ public class corredor {
 
     @Override
     public String toString() {
-        return "el corredor " + nombre + " " + apellido + " nacio en: " + anio_nac + " con " + podios + " podios";
+        return nombre + " " + apellido + " nacido en: " + anio_nac + " con " + podios + " podios";
+    }
+
+    @Override
+    public int compareTo(corredor o) {
+        return (this.getPodios() - o.getPodios());
     }
 }
