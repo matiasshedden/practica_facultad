@@ -1,11 +1,9 @@
 package fileSystem;
 
-import centroComputos.ObjetoOrdenable;
 import fileSystem.condiciones.Condicion;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public abstract class ElementoFS {
     private final LocalDate fCreacion;

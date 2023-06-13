@@ -1,7 +1,5 @@
 package fileSystem;
 
-import centroComputos.ObjetoOrdenable;
-
 import java.time.LocalDate;
 
 public class Archivo extends ElementoFS implements Comparable<Archivo> {
