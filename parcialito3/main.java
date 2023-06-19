@@ -25,6 +25,8 @@ public class main {
         System.out.println(TA.menoresDe(cond1));
         System.out.println("Los mayores de 30 son");
         System.out.println(TA.menoresDe(cond2));
+        System.out.println("Segun sus podios los corredores son: ");
+        TA.mostrarCorredoresPorNombre();
 
 
     }

@@ -1,4 +1,4 @@
-package practico6.PuertoDeCereales.puertoDeCereales;
+package puertoDeCereales;
 
 import java.time.LocalDate;
 

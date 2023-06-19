@@ -1,6 +1,7 @@
 package parcialito3;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class asociacion {
     private String nombre;
@@ -31,8 +32,9 @@ public class asociacion {
             System.out.println(c);
     }
 
-    public ArrayList<corredor> PorPodio() {
-        ArrayList<corredor> resultado = new ArrayList<>();
-
+    public void mostrarCorredoresPorNombre() {
+        Collections.sort(corredores);
+        for (corredor c:corredores)
+            System.out.println(c);
     }
 }

@@ -1,8 +1,6 @@
-package practico6.PuertoDeCereales.puertoDeCereales;
+package puertoDeCereales;
 
-import puertoDeCereales.Comparadores.ComparadorCamionFechaCarga;
-import puertoDeCereales.Comparadores.ComparadorCamionMarca;
-
+import puertoDeCereales.Comparadores.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
