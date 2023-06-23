@@ -1,4 +1,4 @@
-package centroComputos.comparadores;
+package practico6.centroComputos.comparadores;
 
 import fileSystem.Archivo;
 

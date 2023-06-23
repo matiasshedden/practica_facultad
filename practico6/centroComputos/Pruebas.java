@@ -33,21 +33,21 @@ public class Pruebas {
         System.out.println(archivos);
 
         System.out.println("Ordeno los archivos por tamanio ascendente");
-        Comparator tamanioMenor = new centroComputos.comparadores.ComparadorArchivoPorTamanio();
+        Comparator tamanioMenor = new practico6.centroComputos.comparadores.ComparadorArchivoPorTamanio();
         Collections.sort(archivos, tamanioMenor);
         System.out.println(archivos);
 
         System.out.println("Ordeno los archivos por tamanio descendente");
-        Comparator tamanioMayor = new centroComputos.comparadores.ComparadorInverso(tamanioMenor);
+        Comparator tamanioMayor = new practico6.centroComputos.comparadores.ComparadorInverso(tamanioMenor);
         Collections.sort(archivos, tamanioMayor);
         System.out.println(archivos);
 
         Collections.sort(archivos, Collections.reverseOrder());
 
-        Comparator nombreDes = new centroComputos.comparadores.ComparadorArchivoPorNombre().reversed();
+        Comparator nombreDes = new practico6.centroComputos.comparadores.ComparadorArchivoPorNombre().reversed();
         Collections.sort(archivos, nombreDes);
 
-        Collections.sort(archivos, Collections.reverseOrder(new centroComputos.comparadores.ComparadorArchivoPorNombre()));
+        Collections.sort(archivos, Collections.reverseOrder(new practico6.centroComputos.comparadores.ComparadorArchivoPorNombre()));
 
     }
 }
