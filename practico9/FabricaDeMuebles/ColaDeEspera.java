@@ -23,6 +23,14 @@ public class ColaDeEspera {
             elementos.add(i, nuevo);
     }
 
+    public int getTamanio() {
+        return elementos.size();
+    }
+
+    public Comparable getPosicion(int pos) {
+        return elementos.get(pos);
+    }
+
     @Override
     public String toString() { return elementos.toString(); }
 }
