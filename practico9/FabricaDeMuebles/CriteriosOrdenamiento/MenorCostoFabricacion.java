@@ -1,4 +1,4 @@
-package practico9.FabricaDeMuebles.Criterios;
+package practico9.FabricaDeMuebles.CriteriosOrdenamiento;
 
 import practico9.FabricaDeMuebles.Mueble;
 

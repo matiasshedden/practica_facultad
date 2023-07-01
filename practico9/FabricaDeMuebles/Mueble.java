@@ -3,7 +3,7 @@ package practico9.FabricaDeMuebles;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Mueble implements Comparable<Mueble>{
+public class Mueble {
     private String material;
     ArrayList<String> caracteristicas;
     LocalDate fechaLimite;
@@ -39,6 +39,12 @@ public class Mueble implements Comparable<Mueble>{
 
     public void addCaracteristica (String C) { caracteristicas.add(C); }
 
+    public boolean getCaracteristica(String C) {
+        if (caracteristicas.contains(C))
+                return true;
+        return false;
+    }
+
     public double getGanancia() {
         return (this.getPrecioVenta()-this.getCosto()); }
 
@@ -48,8 +54,4 @@ public class Mueble implements Comparable<Mueble>{
                 " y ganancia: " + this.getGanancia() + "\n";
     }
 
-    @Override
-    public int compareTo(Mueble o) {
-        return (int) (o.getGanancia()-this.getGanancia());
-    }
 }

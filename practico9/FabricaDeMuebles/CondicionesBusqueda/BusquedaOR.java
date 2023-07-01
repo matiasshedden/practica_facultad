@@ -1,4 +1,4 @@
-package practico9.FabricaDeMuebles.Condiciones;
+package practico9.FabricaDeMuebles.CondicionesBusqueda;
 
 import practico9.FabricaDeMuebles.Mueble;
 
