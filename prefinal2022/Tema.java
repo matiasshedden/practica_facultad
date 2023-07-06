@@ -14,6 +14,26 @@ public class Tema extends ElementoT {
     private Tema asociado=null;
     private LocalDate fechaCaducidad=null;
 
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public Tema getAsociado() {
+        return asociado;
+    }
+
+    public LocalDate getFechaCaducidad() {
+        return fechaCaducidad;
+    }
+
     public Tema(String titulo, String descripcion) {
         //Genera Tema especial
         this.titulo = titulo;

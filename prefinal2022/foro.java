@@ -27,7 +27,10 @@ public class foro extends ElementoT {
     }
 
     @Override
-    public String getejeTematico() {//Devolver el ultimo eje tematico de sus elementos
-        return null;
+    public String getejeTematico() {//Devolver el ultimo eje tematico de sus elementos??
+        String aux;
+        ElementoT ultimo = foro.get(foro.size());
+        aux = ultimo.getejeTematico();
+        return aux;
     }
 }
