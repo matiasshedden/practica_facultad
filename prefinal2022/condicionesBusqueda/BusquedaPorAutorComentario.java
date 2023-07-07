@@ -2,7 +2,9 @@ package prefinal2022.condicionesBusqueda;
 
 import prefinal2022.Tema;
 
-public class BusquedaPorAutorComentario extends busqueda{
+import java.util.ArrayList;
+
+public class BusquedaPorAutorComentario extends busqueda {
     private String AutorComentario;
 
     public BusquedaPorAutorComentario(String A) {
@@ -11,6 +13,6 @@ public class BusquedaPorAutorComentario extends busqueda{
 
     @Override
     public boolean cumple(Tema T) {
-        return T.
+        return T.contieneComentarioAutor(this.AutorComentario);
     }
 }

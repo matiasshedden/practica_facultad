@@ -1,5 +1,7 @@
 package prefinal2022;
 
+import prefinal2022.condicionesBusqueda.busqueda;
+
 import java.util.ArrayList;
 
 public class foro extends ElementoT {
@@ -28,9 +30,19 @@ public class foro extends ElementoT {
 
     @Override
     public String getejeTematico() {//Devolver el ultimo eje tematico de sus elementos??
-        String aux;
-        ElementoT ultimo = foro.get(foro.size());
-        aux = ultimo.getejeTematico();
+        String aux="";
+        if (foro.size()>0) {
+            ElementoT ultimo = foro.get(foro.size()-1);
+            aux = ultimo.getejeTematico(); }
+        return aux;
+    }
+
+    public ArrayList<Tema> buscarTema(busqueda condicion) {
+        ArrayList<Tema> aux = new ArrayList<>();
+        for (int i = 0; i < foro.size(); i++) {
+            ElementoT hijo = foro.get(i);
+            aux.addAll(hijo.buscarTema(condicion));
+        }
         return aux;
     }
 }

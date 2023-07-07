@@ -1,5 +1,9 @@
 package prefinal2022;
 
+import prefinal2022.condicionesBusqueda.busqueda;
+
+import java.util.ArrayList;
+
 public class Comentario {
     private String autor;
     private String texto;
@@ -24,4 +28,5 @@ public class Comentario {
     public void setTexto(String texto) {
         this.texto = texto;
     }
+
 }
