@@ -49,10 +49,7 @@ public class Foro extends ElementoForo {
 	       }else {
 	    	  return f1;
 	       }
-       
-		
 	}
-
 	@Override
 	public ArrayList<String> getPalabrasClaves() {
         ArrayList<String> salida = new ArrayList<String>();
@@ -66,7 +63,6 @@ public class Foro extends ElementoForo {
         }
         return salida;
 	}
-
 	@Override
 	public String getEjeTematico() {
 		if(elems.size()>0) {
