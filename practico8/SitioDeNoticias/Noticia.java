@@ -10,7 +10,8 @@ public class Noticia extends repo {
     private String autor;
     private String link;
 
-    public Noticia(String titulo, String intro, String texto, String autor, String link) {
+    public Noticia(String nombre, String titulo, String intro, String texto, String autor, String link) {
+        super.setNombre(nombre);
         this.titulo = titulo;
         this.intro = intro;
         this.texto = texto;
@@ -28,6 +29,16 @@ public class Noticia extends repo {
 
     @Override
     public int getCantidad() {
-        return 1;
+        return 1 ;
     }
+
+    @Override
+    public String listar_sitio() {
+        return "/" + link;
+    }
+
+    public String mostrarNombre() {
+        return getNombre();
+    }
+
 }

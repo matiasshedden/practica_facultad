@@ -13,4 +13,11 @@ public abstract class repo {
     }
 
     public abstract int getCantidad();
+
+    public abstract String listar_sitio();
+    
+    @Override
+    public String toString() {
+        return "{/" + nombre + "}";
+    }
 }

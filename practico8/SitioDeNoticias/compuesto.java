@@ -6,11 +6,13 @@ public class compuesto extends repo {
     //Puede ser una categoria, seccion o sub-seccion
     private String descripcion;
     private String imagenAsociada;
-     private ArrayList<Noticia> noticias;
+     private ArrayList<repo> noticias;
 
-    public compuesto(String descripcion, String imagenAsociada) {
+    public compuesto(String nombre, String descripcion, String imagenAsociada) {
+        super.setNombre(nombre);
         this.descripcion = descripcion;
         this.imagenAsociada = imagenAsociada;
+        noticias = new ArrayList<repo>();
     }
 
     public String getDescripcion() {
@@ -29,24 +31,36 @@ public class compuesto extends repo {
         this.imagenAsociada = imagenAsociada;
     }
 
-    public void addNoticia (Noticia N) {
-        noticias.add(N);
+    public void addElemento (repo R) {
+        noticias.add(R);
     }
 
     public void removeNoticia (Noticia N) {
         noticias.remove(N);
     }
 
-    public Noticia getNoticia(int pos) {
+    public repo getNoticia(int pos) {
         return noticias.get(pos);
     }
 
     @Override
     public int getCantidad() {
         int resultado = 0;
-        for (Noticia noti:noticias) {
-            resultado += getCantidad();
+        for (repo noti:noticias) {
+            resultado += noti.getCantidad();//llama a getCantidad de cada objeto repo
         }
         return resultado;
+    }
+
+    @Override
+    public String listar_sitio() {
+        String S=" ";
+        for (repo noti:noticias)
+            S += noti.listar_sitio();//llama a cada listar_sitio de cada objeto repo
+        return this.getNombre() + S;
+    }
+
+    public String mostrarNombre() {
+        return ("/" + this.getNombre());
     }
 }
