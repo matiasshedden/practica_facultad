@@ -34,24 +34,24 @@
         System.out.println("La sumatoria de nodos es: " + tmp.sumatoriaNodos());
         System.out.println(tmp.getHojas());
         System.out.println(tmp.getHojasMayoresQue(1));
+         tmp.completeTree();
     */
 public class main {
     public static void main(String[] args) {
         Tree tmp = new Tree();
         //Tree vacio = new Tree();
 
-        tmp.add(0);
-        tmp.add(0);
+        tmp.add(6);
+        tmp.add(2);
         tmp.add(1);
-        tmp.add(0);
+        tmp.add(4);
         tmp.add(3);
-        tmp.add(0);
+        tmp.add(8);
         tmp.add(7);
 
-        tmp.imprimirEnOrden();
-        tmp.completeTree();
-        tmp.imprimirEnOrden();
-        
-
+        System.out.println((int) (Math.random()*10));
+        System.out.println((int) (Math.random()*10));
+        System.out.println((int) (Math.random()*10));
+        System.out.println((int) (Math.random()*10));
     }
 }

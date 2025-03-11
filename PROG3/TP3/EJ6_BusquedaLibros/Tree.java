@@ -1,3 +1,5 @@
+package EJ6_BusquedaLibros;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +38,22 @@ public class Tree {
 		}
 	}
 
+	public void addLibro(Libro L) {	root.setLibro(L); }
+
+	public void listaLibros() { getLibro(root); }
+
+	//Metodo para devolver recursivamente el libro contenido en cada nodo
+	private void getLibro(TreeNode N) {
+		if (N == null)
+			return;
+		else {
+			if (N.getLeft() == null && N.getRight() == null)
+				System.out.println(N.getLibro());
+		}
+		getLibro(N.getLeft());
+		getLibro(N.getRight());
+	}
+
 	public int getRoot() {
 		return this.root.getValue();
 	}
@@ -43,6 +61,9 @@ public class Tree {
 	public boolean isEmpty() {
 		return root == null;
 	}
+
+
+
 
 	/*
 	 * METODOS PARA IMPRIMIR EL ARBOL
@@ -113,7 +134,6 @@ public class Tree {
 
 	/*
 	* METODO PRINCIPAL PARA ENCONTRAR LA RAMA MAS LARGA
-	* O(h) donde h es la altura del arbol (Cubre los casos O(n) "enredadera" y O(Log2 n) completo)
 	* Metodo publico getRamaMasLarga()
 	* 	Llama a getLongestBranch(Nodo N)
 	*
@@ -250,7 +270,7 @@ public class Tree {
 			return "El valor no fue encontrado";
 	}
 
-	private void delete(TreeNode parent, TreeNode N,  int valorbuscado) {
+	private void delete(TreeNode parent, TreeNode N, int valorbuscado) {
 	/*
 	* Caso 1: Si no tiene hijos, lo borro
 	* Caso 2: Si tiene 1 hijo, reemplazo el valor de N por next y borro el camino
@@ -338,7 +358,7 @@ public class Tree {
 	}
 
 
-	private ArrayList<Integer> HojasMayorQue(TreeNode N,  int k, ArrayList<Integer> aux) {
+	private ArrayList<Integer> HojasMayorQue(TreeNode N, int k, ArrayList<Integer> aux) {
 		if (N == null)
 			return aux;
 		else {
